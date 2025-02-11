@@ -1,4 +1,4 @@
-# Listador de tarefas
+# Lista de tarefas
 
 Esse simples projeto foi feito para testar como juntar diferentes aplicações em um ambiente, através do uso de Containers por meio do Docker, ou seja, apenas para aprender como utilizar essas tecnologias.
 
