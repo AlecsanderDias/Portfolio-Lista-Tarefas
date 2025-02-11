@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      backend:
+        condition: service_started
+    env_file: "./frontend/.env"
+  backend:
+    build: ./backend
+    ports:
+      - 8000:8000
+    restart: always
+    depends_on:
+      - database
+    env_file: "./backend/.env"
+  database:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
